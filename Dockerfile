@@ -74,9 +74,10 @@ RUN \
   pip install -U --no-cache-dir \
     pip \
     wheel && \
+  pip install -U --no-cache-dir \
+    git+https://github.com/sezaru/beets@use_my_fork#egg=beets && \
   pip install -U --no-cache-dir --find-links https://wheel-index.linuxserver.io/alpine-3.19/ \
     beautifulsoup4 \
-    beets==${BEETS_VERSION} \
     beets-extrafiles \
     beetcamp \
     discogs-client \
